@@ -40,7 +40,8 @@ public class MarkdownParseTest {
         try{
             Path var1 = Path.of("test-file4.md");
             String test = Files.readString(var1);
-            assertEquals("Nothing should be returned", null, MarkdownParse.getLinks(test));
+            ArrayList<String> array = new ArrayList<>();
+            assertEquals("Nothing should be returned", array, MarkdownParse.getLinks(test));
         }catch(IOException e){
             e.printStackTrace();
         }
