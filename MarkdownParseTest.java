@@ -19,7 +19,7 @@ public class MarkdownParseTest {
     @Test
     public void getLinks(){
 
-        try{        
+        //try{        
             Path file = Path.of("test-markdown.md");
             String content = Files.readString(file);
             ArrayList<String> links = MarkdownParse.getLinks(content);
@@ -28,9 +28,10 @@ public class MarkdownParseTest {
             String link2 = "some-page.html";
 
             assertEquals(List.of(link,link2), links);
-        }
+        /**}
         catch(IOException e){
             e.printStackTrace();
         }
+        */
     }
 }
