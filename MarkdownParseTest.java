@@ -37,13 +37,13 @@ public class MarkdownParseTest {
 
     @Test
     public void getPicture(){
-        //try{
+        try{
             Path var1 = Path.of("test-file4.md");
             String test = Files.readString(var1);
             assertEquals("Nothing should be returned", null, MarkdownParse.getLinks(test));
-        /** }catch(IOException e){
+        }catch(IOException e){
             e.printStackTrace();
         }
-        */
+        
     }
 }
